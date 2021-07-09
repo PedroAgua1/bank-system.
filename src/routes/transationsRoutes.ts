@@ -1,20 +1,12 @@
 import { Response, Request, Router } from "express";
-import Transaction from "../models/Transaction";
-import Transactions from "../models/Transactions";
+import { repositoryController } from "../controller/repositoryController";
 
 const transactionRoute = Router()
 
-interface post{
-    name: string
-    value: number
-}
-
 transactionRoute.post('/', (request: Request, response: Response) => {
-    const {name, value}:  post = request.body
-    
-    const data = new Transaction(name, value)
+    const {name, value} = request.body
 
-    data.viewr()
+    repositoryController(name, value)
 
     return response.json({'🍗message':'A rota de visualização é /transactionViewr' });
 })

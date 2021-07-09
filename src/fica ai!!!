@@ -1,0 +1,12 @@
+this.data = [this.contaCorrente,
+            this.name,    
+            this.id,
+            this.numDeposit,
+            this.totalDeposit,
+            this.numWithDraw,
+            this.totalWithDraw,
+        ]
+
+
+data: any[]
+

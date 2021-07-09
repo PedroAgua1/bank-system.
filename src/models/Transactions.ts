@@ -1,9 +1,13 @@
 export default class Transactions{
-    trasactions: any[]
+    static transactions: any[]
 
-    constructor(objeto: (Number | String)[]){
-        this.trasactions = []
-        this.trasactions.push()
+    constructor(){
+        Transactions.transactions = []
+        
+    }
+
+    add(objeto: any){
+        Transactions.transactions.push(objeto)
     }
     
 }

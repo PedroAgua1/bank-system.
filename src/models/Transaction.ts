@@ -1,4 +1,4 @@
-import express, { response, Router } from 'express'
+import { Router } from 'express'
 import { v4 } from 'uuid'
 import Transactions from './Transactions'
 
@@ -29,6 +29,11 @@ export default class Transaction{
         this.totalWithDraw = 0
 
         Transaction.quantidade += 1
+
+        
+
+        const add = new Transactions()
+        add.add(Transaction)
     }
 
     withdraw(value: number){
@@ -44,10 +49,6 @@ export default class Transaction{
         this.contaCorrente += value
         this.numDeposit += 1
         this.totalDeposit += value
-    }
-
-    register(){
-        const transactionsArray = new Transactions([this.id, Transaction.quantidade])
     }
 
     viewr(){

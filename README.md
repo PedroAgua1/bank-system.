@@ -1,4 +1,4 @@
-# bank-syste.
+# bank-system.
 
 Esse sistema foi criado para gerenciar movimentações bancárias. 
 
